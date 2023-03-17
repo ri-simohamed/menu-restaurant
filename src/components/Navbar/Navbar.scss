@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(91, 65, 158);
+    color: rgb(255, 255, 255);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+
+    .left {
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icons {
+            display: none;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            width: 15rem;
+            height: 2rem;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+
+            input {
+                border: none;
+                width: 100%;
+
+                &:focus {
+                    outline: none
+                }
+            }
+            button {
+                border: none;
+                height: 2rem;
+                background-color: green;
+                color: rgb(242, 242, 243);
+                cursor: pointer;
+                border-radius: 5px;
+                width: 5rem;
+
+                &:hover {
+                    color: green;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

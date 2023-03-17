@@ -1,0 +1,56 @@
+.cart {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+    &:hover {
+        background-color: rgb(91, 65, 158);
+        color: #fff;
+    }
+
+    .left-cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 19px;
+        }
+
+        img {
+            width: 15rem;
+            height: 7rem;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+    .right-cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            width: 13rem;
+            font-size: 13px;
+        }
+    }
+}
+.announce {
+    text-align: center;
+    font-size: 20px;
+    color: lightgray;
+}
