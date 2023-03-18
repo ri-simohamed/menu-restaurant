@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Navbar.scss'
-import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
 
 const Navbar = ({ fitlterbySearch }) => {
 
@@ -21,7 +20,6 @@ const Navbar = ({ fitlterbySearch }) => {
                 <input onChange={(e) => setSearchValue(e.target.value)} value={searchValue} type="text" placeholder='Search...'/>
                 <button onClick={onSearch}>Search</button>
             </div>
-            <MenuOutlinedIcon className='icons'/>
         </div>
     </div>
   )
