@@ -10,23 +10,32 @@ const App = () => {
 
   const [dataItems, setDataItems] = useState(foodData);
 
-  const allCategory = ['All', ...new Set(foodData.map((ctgy) => ctgy.category))];
+  const allCategory = ['All', ...new Set(foodData.map((cty) => cty.category))];
 
   /* filter by catygory */
 
   const filterCategory = (cty) => {
-      if (cty === "All") {
+      if (cty === 'All') {
         setDataItems(foodData);
       }
       else {
-        const newcty = foodData.filter((item) => item.category === cty);
-        setDataItems(newcty);
+        const newArray = foodData.filter((item) => item.category === cty);
+        setDataItems(newArray);
+      }
+  }
+
+  /* filter by search */
+
+  const fitlterbySearch = (w) => {
+      if (w !== ""){
+        const newArray = foodData.filter((item) => item.Name === w);
+        setDataItems(newArray);
       }
   }
 
   return (
     <div className='app'>
-        <Navbar/>
+        <Navbar fitlterbySearch={fitlterbySearch}/>
         <div className='content'>
         <Header/>
         <Category filterCategory={filterCategory} allCategory={allCategory}/>

@@ -1,3 +1,5 @@
+@import "../../-media-query.scss";
+
 .cart {
     display: flex;
     width: 100%;
@@ -9,6 +11,10 @@
     cursor: pointer;
     margin-bottom: 2rem;
 
+    @include phone {
+        width: 100%;
+    }
+
     &:hover {
         background-color: rgb(91, 65, 158);
         color: #fff;
@@ -19,9 +25,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 10px;
 
         h1 {
             font-size: 19px;
+
+            @include phone {
+                font-size: 9px;
+            }
         }
 
         img {
@@ -29,6 +40,11 @@
             height: 7rem;
             border-radius: 10px;
             object-fit: cover;
+
+            @include phone {
+                width: 10rem;
+                height: 5rem;
+            }
         }
     }
     .right-cart {
@@ -41,11 +57,19 @@
         span {
             font-size: 20px;
             font-weight: 600;
+
+            @include phone {
+                font-size: 10px;
+            }
         }
 
         p {
             width: 13rem;
             font-size: 13px;
+
+            @include phone {
+                font-size: 8px;
+            }
         }
     }
 }

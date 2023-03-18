@@ -1,3 +1,5 @@
+@import "../../-media-query.scss";
+
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -7,11 +9,27 @@
     height: 60px;
     width: 100%;
     position: fixed;
+    z-index: 99;
+
+    @include phone {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: crimson;
+        flex-direction: column;
+        gap: 10px;
+    }
 
     .left {
         h1 {
             font-size: 20px;
             font-weight: 600;
+
+            @include phone {
+                font-size: 12px;
+                margin-top: 0.4rem;
+            }
         }
     }
 
@@ -34,6 +52,11 @@
             border: 1px solid lightgray;
             border-radius: 5px;
 
+            @include phone {
+                height: 1.5rem;
+                margin-bottom: 0.3rem;
+            }
+
             input {
                 border: none;
                 width: 100%;
@@ -50,6 +73,10 @@
                 cursor: pointer;
                 border-radius: 5px;
                 width: 5rem;
+
+                @include phone {
+                    height: 1.5rem;
+                }
 
                 &:hover {
                     color: green;
